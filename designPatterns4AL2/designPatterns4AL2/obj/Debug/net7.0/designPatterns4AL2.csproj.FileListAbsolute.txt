@@ -1,0 +1,15 @@
+/Users/davidzerbib/RiderProjects/designPatterns4AL2/designPatterns4AL2/bin/Debug/net7.0/designPatterns4AL2
+/Users/davidzerbib/RiderProjects/designPatterns4AL2/designPatterns4AL2/bin/Debug/net7.0/designPatterns4AL2.deps.json
+/Users/davidzerbib/RiderProjects/designPatterns4AL2/designPatterns4AL2/bin/Debug/net7.0/designPatterns4AL2.runtimeconfig.json
+/Users/davidzerbib/RiderProjects/designPatterns4AL2/designPatterns4AL2/bin/Debug/net7.0/designPatterns4AL2.dll
+/Users/davidzerbib/RiderProjects/designPatterns4AL2/designPatterns4AL2/bin/Debug/net7.0/designPatterns4AL2.pdb
+/Users/davidzerbib/RiderProjects/designPatterns4AL2/designPatterns4AL2/obj/Debug/net7.0/designPatterns4AL2.csproj.AssemblyReference.cache
+/Users/davidzerbib/RiderProjects/designPatterns4AL2/designPatterns4AL2/obj/Debug/net7.0/designPatterns4AL2.GeneratedMSBuildEditorConfig.editorconfig
+/Users/davidzerbib/RiderProjects/designPatterns4AL2/designPatterns4AL2/obj/Debug/net7.0/designPatterns4AL2.AssemblyInfoInputs.cache
+/Users/davidzerbib/RiderProjects/designPatterns4AL2/designPatterns4AL2/obj/Debug/net7.0/designPatterns4AL2.AssemblyInfo.cs
+/Users/davidzerbib/RiderProjects/designPatterns4AL2/designPatterns4AL2/obj/Debug/net7.0/designPatterns4AL2.csproj.CoreCompileInputs.cache
+/Users/davidzerbib/RiderProjects/designPatterns4AL2/designPatterns4AL2/obj/Debug/net7.0/designPatterns4AL2.dll
+/Users/davidzerbib/RiderProjects/designPatterns4AL2/designPatterns4AL2/obj/Debug/net7.0/refint/designPatterns4AL2.dll
+/Users/davidzerbib/RiderProjects/designPatterns4AL2/designPatterns4AL2/obj/Debug/net7.0/designPatterns4AL2.pdb
+/Users/davidzerbib/RiderProjects/designPatterns4AL2/designPatterns4AL2/obj/Debug/net7.0/designPatterns4AL2.genruntimeconfig.cache
+/Users/davidzerbib/RiderProjects/designPatterns4AL2/designPatterns4AL2/obj/Debug/net7.0/ref/designPatterns4AL2.dll
