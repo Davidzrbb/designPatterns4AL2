@@ -8,8 +8,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="35212821-be21-4345-9dd8-d180ceb8b913" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/designPatterns4AL2/Pizza.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/designPatterns4AL2/PizzaCommand.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.designPatterns4AL2/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.designPatterns4AL2/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/designPatterns4AL2/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/designPatterns4AL2/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/designPatterns4AL2/bin/Debug/net7.0/designPatterns4AL2.dll" beforeDir="false" afterPath="$PROJECT_DIR$/designPatterns4AL2/bin/Debug/net7.0/designPatterns4AL2.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/designPatterns4AL2/bin/Debug/net7.0/designPatterns4AL2.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/designPatterns4AL2/bin/Debug/net7.0/designPatterns4AL2.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/designPatterns4AL2/obj/Debug/net7.0/designPatterns4AL2.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/designPatterns4AL2/obj/Debug/net7.0/designPatterns4AL2.csproj.CoreCompileInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/designPatterns4AL2/obj/Debug/net7.0/designPatterns4AL2.dll" beforeDir="false" afterPath="$PROJECT_DIR$/designPatterns4AL2/obj/Debug/net7.0/designPatterns4AL2.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/designPatterns4AL2/obj/Debug/net7.0/designPatterns4AL2.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/designPatterns4AL2/obj/Debug/net7.0/designPatterns4AL2.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/designPatterns4AL2/obj/Debug/net7.0/ref/designPatterns4AL2.dll" beforeDir="false" afterPath="$PROJECT_DIR$/designPatterns4AL2/obj/Debug/net7.0/ref/designPatterns4AL2.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/designPatterns4AL2/obj/Debug/net7.0/refint/designPatterns4AL2.dll" beforeDir="false" afterPath="$PROJECT_DIR$/designPatterns4AL2/obj/Debug/net7.0/refint/designPatterns4AL2.dll" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -68,7 +77,7 @@
       <option name="presentableId" value="Default" />
       <updated>1682504691360</updated>
       <workItem from="1682504692404" duration="1908000" />
-      <workItem from="1682582507255" duration="600000" />
+      <workItem from="1682582507255" duration="12699000" />
     </task>
     <servers />
   </component>
