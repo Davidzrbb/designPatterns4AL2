@@ -6,7 +6,7 @@ public static class MainClass
     {
         Console.WriteLine("\nBienvenue chez Pizza Yolo ! \n");
         Console.WriteLine("Veuillez choisir votre pizza en précisant le nombre. Exemple : 4 Régina\n");
-
+        
         DisplayMenu();
         while (true)
         {
@@ -28,6 +28,41 @@ public static class MainClass
                 Console.Write(", ");
             }
         }
+    }
+    
+    private static void DisplayFacture(List<PizzaCommand> pizzaCommands)
+    {
+        
+        Console.WriteLine("\nFacture : ");
+        var total = 0.0;
+        
+        foreach (var pizzaCmd in pizzaCommands)
+        {
+            var pizzaName = pizzaCmd.Name.Trim();
+            var pizzaCount = pizzaCmd.Count;
+            var maxLengthPizza = pizzaCommands.Max(s => s.Name.Length);
+            foreach (Pizza pizza in Enum.GetValues(typeof(Pizza)))
+            {
+                var fieldInfo = typeof(Pizza).GetField(pizza.ToString());
+                var attribut = (PizzaAttribut)Attribute.GetCustomAttribute(fieldInfo, typeof(PizzaAttribut));
+                
+                if (attribut.Nom.Equals(pizzaName))
+                {
+                    Console.WriteLine(pizzaCount + " " + pizzaName.PadRight(maxLengthPizza) + " : " + pizzaCount + " * " + attribut.Prix + "€");
+                    total += pizzaCount * attribut.Prix;   
+                    var maxLengthIngredient = attribut.Ingredients.Max(s => s.Nom.Length);
+                    foreach (var ingredient in attribut.Ingredients)
+                    {
+                        var price = ingredient.Quantite != 0 ? (ingredient.Quantite * pizzaCount).ToString() : "";
+                        Console.WriteLine(ingredient.Nom.PadRight(maxLengthIngredient) + " " + price +
+                                          " " + ingredient.Unite);
+                    }
+                }
+            }
+            
+        }
+        Console.WriteLine("Prix total : " + total + "€");
+
     }
 
     private static void TakeCommand()
@@ -75,6 +110,8 @@ public static class MainClass
         {
             Console.WriteLine(pizzaCommandList.Count + ": " + pizzaCommandList.Name);
         }
+        
+        DisplayFacture(pizzaCommandsList);
     }
 
     private static List<PizzaCommand> AddCountSamePizza(List<PizzaCommand> pizzaCommands)
@@ -121,4 +158,5 @@ public static class MainClass
 
         return true;
     }
+
 }
