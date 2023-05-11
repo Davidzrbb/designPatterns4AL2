@@ -7,6 +7,5 @@ public class PizzaCommand
 
     // count
     public int Count { get; set; }
-
-
+    
 }
