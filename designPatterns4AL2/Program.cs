@@ -52,6 +52,32 @@ public static class MainClass {
         }
         Console.WriteLine("Prix total : " + total + "€");
     }
+    
+    // Méthode pour afficher la recette
+    public static void DisplayRecette(List<PizzaCommand> pizzaCommands) {
+        foreach (var pizzaCommand in pizzaCommands)
+        {
+            var pizzaName = pizzaCommand.Name.Trim();
+            var pizzaCount = pizzaCommand.Count;
+            foreach (Pizza pizza in Enum.GetValues(typeof(Pizza)))
+            {
+                var fieldInfo = typeof(Pizza).GetField(pizza.ToString());
+                var attribut = (PizzaAttribut)Attribute.GetCustomAttribute(fieldInfo, typeof(PizzaAttribut));
+                if (attribut.Nom.Equals(pizzaName))
+                {
+                    Console.WriteLine("\nRecette de la pizza " + pizzaName + " : \n");
+                    var pate = (pizzaName == "Régina") ? "pâte épaisse" : "pâte fine";
+                    Console.WriteLine("Déroulez une " + pate);
+                    Console.WriteLine("Ajoutez " + attribut.Ingredients[0].Quantite + attribut.Ingredients[0].Unite + " de sauce " + attribut.Ingredients[0].Nom);
+                    for(int i = 1; i < attribut.Ingredients.Count; i++)
+                    {
+                        Console.WriteLine("Ajoutez " + attribut.Ingredients[i].Quantite + " " + attribut.Ingredients[i].Unite + " de " + attribut.Ingredients[i].Nom);
+                    }
+                    Console.WriteLine("Enfournez pendant 15 minutes à 210°C");
+                }
+            }
+        }
+    }
 
     private static void TakeCommand() {
         Console.Write("\nVotre commande : ");
@@ -85,8 +111,7 @@ public static class MainClass {
                 }
             }
             Console.WriteLine(pizzaCommand.Name);
-            if (!checkNamePizza(pizzaCommand.Name.Trim()))
-            {
+            if (!checkNamePizza(pizzaCommand.Name.Trim())) {
                 return;
             }
             pizzaCommandsList.Add(pizzaCommand);
@@ -97,6 +122,7 @@ public static class MainClass {
             Console.WriteLine(pizzaCommandList.Count + ": " + pizzaCommandList.Name);
         }
         DisplayFacture(pizzaCommandsList);
+        DisplayRecette(pizzaCommandsList);
     }
 
     private static List<PizzaCommand> AddCountSamePizza(List<PizzaCommand> pizzaCommands) {
@@ -111,7 +137,6 @@ public static class MainClass {
                 pizzaCommandsWithoutDuplicate.Add(pizzaCommand);
             }
         }
-
         return pizzaCommandsWithoutDuplicate;
     }
 
@@ -134,5 +159,4 @@ public static class MainClass {
         }
         return true;
     }
-
 }

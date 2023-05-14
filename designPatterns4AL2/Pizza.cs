@@ -2,7 +2,6 @@ using designPatterns4AL2;
 
 namespace designPatterns4AL2;
 
-
 [Flags]
 public enum Pizza {
     
