@@ -10,6 +10,13 @@
     <list default="true" id="35212821-be21-4345-9dd8-d180ceb8b913" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.designPatterns4AL2/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.designPatterns4AL2/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/designPatterns4AL2/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/designPatterns4AL2/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/designPatterns4AL2/bin/Debug/net7.0/designPatterns4AL2.dll" beforeDir="false" afterPath="$PROJECT_DIR$/designPatterns4AL2/bin/Debug/net7.0/designPatterns4AL2.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/designPatterns4AL2/bin/Debug/net7.0/designPatterns4AL2.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/designPatterns4AL2/bin/Debug/net7.0/designPatterns4AL2.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/designPatterns4AL2/obj/Debug/net7.0/designPatterns4AL2.dll" beforeDir="false" afterPath="$PROJECT_DIR$/designPatterns4AL2/obj/Debug/net7.0/designPatterns4AL2.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/designPatterns4AL2/obj/Debug/net7.0/designPatterns4AL2.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/designPatterns4AL2/obj/Debug/net7.0/designPatterns4AL2.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/designPatterns4AL2/obj/Debug/net7.0/ref/designPatterns4AL2.dll" beforeDir="false" afterPath="$PROJECT_DIR$/designPatterns4AL2/obj/Debug/net7.0/ref/designPatterns4AL2.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/designPatterns4AL2/obj/Debug/net7.0/refint/designPatterns4AL2.dll" beforeDir="false" afterPath="$PROJECT_DIR$/designPatterns4AL2/obj/Debug/net7.0/refint/designPatterns4AL2.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/designPatterns4AL2/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/designPatterns4AL2/obj/rider.project.restore.info" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
