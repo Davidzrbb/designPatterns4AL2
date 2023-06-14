@@ -95,12 +95,40 @@ public static class MainClass
         var maxLengthPizza = 12;
         var text = pizzaCount + " " + pizzaName + " : " + pizzaCount + " * " + pizza.Prix + "€";
         Total += pizzaCount * pizza.Prix;
-        foreach (Ingredient ingredient in pizza.Ingredients)
+        foreach (var ingredient in pizza.Ingredients)
         {
-            text += "\n" + ingredient.Name + " " + ingredient.Quantite * pizzaCount + " " + ingredient.Mesure;
+            text += "\n" + ingredient.Name.PadRight(maxLengthPizza) + " " + ingredient.Quantite * pizzaCount + " " + ingredient.Mesure;
         }
-
+        Console.WriteLine("_________________________");
         Console.WriteLine(text);
+        
+        /*private static void DisplayFacture(List<PizzaCommand> pizzaCommands) {
+            Console.WriteLine("\nFacture : ");
+            var total = 0.0;
+        
+            foreach (var pizzaCmd in pizzaCommands) {
+                var pizzaName = pizzaCmd.Name.Trim();
+                var pizzaCount = pizzaCmd.Count;
+                var maxLengthPizza = pizzaCommands.Max(s => s.Name.Length);
+                foreach (Pizza pizza in Enum.GetValues(typeof(Pizza))) {
+                    var fieldInfo = typeof(Pizza).GetField(pizza.ToString());
+                    var attribut = (PizzaAttribut)Attribute.GetCustomAttribute(fieldInfo, typeof(PizzaAttribut));
+                
+                    if (attribut.Nom.Equals(pizzaName)) {
+                        Console.WriteLine("_________________________");
+                        Console.WriteLine(pizzaCount + " " + pizzaName.PadRight(maxLengthPizza) + " : " + pizzaCount + " * " + attribut.Prix + "€");
+                        total += pizzaCount * attribut.Prix;   
+                        var maxLengthIngredient = attribut.Ingredients.Max(s => s.Nom.Length);
+                        foreach (var ingredient in attribut.Ingredients) {
+                            var price = ingredient.Quantite != 0 ? (ingredient.Quantite * pizzaCount).ToString() : "";
+                            Console.WriteLine(ingredient.Nom.PadRight(maxLengthIngredient) + " " + price +
+                                              " " + ingredient.Unite);
+                        }
+                    }
+                }
+            }
+            Console.WriteLine("Prix total : " + total + "€");
+        }*/
     }
 
     private static void CreateFacture(PizzaCommand pizzaCommand)
