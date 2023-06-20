@@ -1,0 +1,75 @@
+{
+  "Factures": [
+    {
+      "PizzaName": "Regina",
+      "Ingredients": [
+        {
+          "Name": "tomate",
+          "Quantite": 450,
+          "Mesure": "g"
+        },
+        {
+          "Name": "mozzarella",
+          "Quantite": 375,
+          "Mesure": "g"
+        },
+        {
+          "Name": "fromage râpe",
+          "Quantite": 300,
+          "Mesure": "g"
+        },
+        {
+          "Name": "jambon",
+          "Quantite": 6,
+          "Mesure": "tranches"
+        },
+        {
+          "Name": "champignons frais",
+          "Quantite": 12,
+          "Mesure": ""
+        },
+        {
+          "Name": "huile d'olive",
+          "Quantite": 6,
+          "Mesure": "cuillères à soupe"
+        }
+      ]
+    },
+    {
+      "PizzaName": "Vegetarienne",
+      "Ingredients": [
+        {
+          "Name": "tomate",
+          "Quantite": 150,
+          "Mesure": "g"
+        },
+        {
+          "Name": "mozzarella",
+          "Quantite": 100,
+          "Mesure": "g"
+        },
+        {
+          "Name": "courgette",
+          "Quantite": 0,
+          "Mesure": ""
+        },
+        {
+          "Name": "poivron jaune",
+          "Quantite": 1,
+          "Mesure": ""
+        },
+        {
+          "Name": "tomates cerises",
+          "Quantite": 6,
+          "Mesure": ""
+        },
+        {
+          "Name": "quelques olives",
+          "Quantite": 0,
+          "Mesure": ""
+        }
+      ]
+    }
+  ],
+  "Prix": 31.5
+}

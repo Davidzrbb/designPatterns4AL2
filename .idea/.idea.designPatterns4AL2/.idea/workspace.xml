@@ -7,17 +7,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="35212821-be21-4345-9dd8-d180ceb8b913" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.designPatterns4AL2/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.designPatterns4AL2/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/designPatterns4AL2/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/designPatterns4AL2/Program.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/designPatterns4AL2/bin/Debug/net7.0/designPatterns4AL2.dll" beforeDir="false" afterPath="$PROJECT_DIR$/designPatterns4AL2/bin/Debug/net7.0/designPatterns4AL2.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/designPatterns4AL2/bin/Debug/net7.0/designPatterns4AL2.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/designPatterns4AL2/bin/Debug/net7.0/designPatterns4AL2.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/designPatterns4AL2/obj/Debug/net7.0/designPatterns4AL2.dll" beforeDir="false" afterPath="$PROJECT_DIR$/designPatterns4AL2/obj/Debug/net7.0/designPatterns4AL2.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/designPatterns4AL2/obj/Debug/net7.0/designPatterns4AL2.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/designPatterns4AL2/obj/Debug/net7.0/designPatterns4AL2.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/designPatterns4AL2/obj/Debug/net7.0/ref/designPatterns4AL2.dll" beforeDir="false" afterPath="$PROJECT_DIR$/designPatterns4AL2/obj/Debug/net7.0/ref/designPatterns4AL2.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/designPatterns4AL2/obj/Debug/net7.0/refint/designPatterns4AL2.dll" beforeDir="false" afterPath="$PROJECT_DIR$/designPatterns4AL2/obj/Debug/net7.0/refint/designPatterns4AL2.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/designPatterns4AL2/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/designPatterns4AL2/obj/rider.project.restore.info" afterDir="false" />
-    </list>
+    <list default="true" id="35212821-be21-4345-9dd8-d180ceb8b913" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -32,7 +22,9 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/designPatterns4AL2/PizzaRecette.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/1baed8ed7c8cc7abdea39fb3c5f0f44dc0abbc723fadffdfb7ca17ad42305e/XmlSerializer.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="ProjectId" id="2OxaT9vxjus7V1scIOGLcGiYp5z" />
   <component name="ProjectViewState">
@@ -43,7 +35,7 @@
   &quot;keyToString&quot;: {
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;second-step&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;feature/file-in-out&quot;,
     &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
@@ -55,9 +47,9 @@
   },
   &quot;keyToStringList&quot;: {
     &quot;rider.external.source.directories&quot;: [
-      &quot;C:\\Users\\33766\\AppData\\Roaming\\JetBrains\\Rider2023.1\\resharper-host\\DecompilerCache&quot;,
-      &quot;C:\\Users\\33766\\AppData\\Roaming\\JetBrains\\Rider2023.1\\resharper-host\\SourcesCache&quot;,
-      &quot;C:\\Users\\33766\\AppData\\Local\\Symbols\\src&quot;
+      &quot;/Users/davidzerbib/Library/Application Support/JetBrains/Rider2023.1/resharper-host/DecompilerCache&quot;,
+      &quot;/Users/davidzerbib/Library/Application Support/JetBrains/Rider2023.1/resharper-host/SourcesCache&quot;,
+      &quot;/Users/davidzerbib/.local/share/Symbols/src&quot;
     ]
   }
 }</component>
@@ -95,6 +87,10 @@
       <workItem from="1684057498776" duration="4828000" />
       <workItem from="1686682612942" duration="7719000" />
       <workItem from="1686756349219" duration="3669000" />
+      <workItem from="1687255710383" duration="20297000" />
+      <workItem from="1687292706433" duration="137000" />
+      <workItem from="1687292857165" duration="5316000" />
+      <workItem from="1687298193779" duration="1473000" />
     </task>
     <servers />
   </component>

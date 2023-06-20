@@ -6,25 +6,25 @@ public class PizzaCommandBuilder
     private int? _quatreSaisons;
     private int? _vegetarienne;
 
-    public PizzaCommandBuilder withRegina(int regina)
+    public PizzaCommandBuilder WithRegina(int regina)
     {
         _regina = regina;
         return this;
     }
     
-    public PizzaCommandBuilder withQuatreSaisons(int quatreSaisons)
+    public PizzaCommandBuilder WithQuatreSaisons(int quatreSaisons)
     {
         _quatreSaisons = quatreSaisons;
         return this;
     } 
     
-    public PizzaCommandBuilder withVegetarienne(int vegetarienne)
+    public PizzaCommandBuilder WithVegetarienne(int vegetarienne)
     {
         _vegetarienne = vegetarienne;
         return this;
     }
     
-    public PizzaCommand Build()
+    public PizzaCommand? Build()
     {
         if (!_regina.HasValue && !_quatreSaisons.HasValue && !_vegetarienne.HasValue)
             throw new Exception("Aucune pizza n'a été commandée");

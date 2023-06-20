@@ -2,112 +2,58 @@
 
 public static class MainClass
 {
-    //variable global total 
-    public static double Total = 0;
+    private static double _total = 0;
 
     public static void Main(string[] args)
     {
+        var pizzaCommand = new PizzaCommand(0, 0, 0);
         Console.OutputEncoding = System.Text.Encoding.UTF8;
-        Console.WriteLine("\nBienvenue chez Pizza Yolo ! \n");
-        Console.WriteLine(
-            "Veuillez choisir votre pizza en précisant le nombre. Exemple : 3 Vegetarienne, 2 Regina, 2 4 Saisons\n");
-
-        DisplayMenu();
-
         while (true)
         {
-            // on boucle pour que le programme n'est pas de fin 
-            TakeCommand();
-        }
-    }
-
-    private static void DisplayMenu()
-    {
-        Console.WriteLine(Pizza.Create("regina").Nom + ", " + Pizza.Create("vegetarienne").Nom + ", " +
-                          Pizza.Create("4saisons").Nom);
-    }
-
-    private static void TakeCommand()
-    {
-        Console.Write("\nVotre commande : ");
-        var command = Console.ReadLine();
-        if (command!.Trim() == "")
-        {
-            Console.WriteLine("Votre commande est vide");
-            return;
-        }
-
-        var pizzaAndCountArray = command.ToLower().Split(',');
-        for (var i = 0; i < pizzaAndCountArray.Length; i++)
-        {
-            if (pizzaAndCountArray[i].Contains("4 saisons"))
+            Console.WriteLine("\nBienvenue chez Pizza Yolo ! \n");
+            Console.WriteLine("\nNous acceptons les fichier json, xml, text ou en ligne de commande !");
+            Console.WriteLine("Veuillez choisir votre méthode de commande : ");
+            Console.WriteLine("1 - Fichier");
+            Console.WriteLine("2 - Ligne de commande");
+            Console.Write("\nVotre choix : ");
+            var choice = Console.ReadLine();
+            switch (choice)
             {
-                pizzaAndCountArray[i] = pizzaAndCountArray[i].Replace("4 saisons", "4saisons");
-            }
-        }
-
-        var countRegina = 0;
-        var countVegetarienne = 0;
-        var countQuatreSaisons = 0;
-
-        foreach (var pizzaAndCount in pizzaAndCountArray)
-        {
-            var nameOrCount = pizzaAndCount.Trim().Split(' ');
-            if (nameOrCount.Length < 2)
-            {
-                Console.WriteLine("Commande incomplète");
-                return;
-            }
-
-            switch (nameOrCount[1])
-            {
-                case "regina":
-                    countRegina += int.Parse(nameOrCount[0]);
+                case "1":
+                    Console.Write("\nChemin du fichier : ");
+                    var path = Console.ReadLine();
+                    if (path != null)
+                        pizzaCommand = CommandParserFactoryUpload
+                            .CreateCommandeParser(Path.GetExtension(path)).ParseCommand(path);
                     break;
-                case "vegetarienne":
-                    countVegetarienne += int.Parse(nameOrCount[0]);
-                    break;
-                case "4saisons":
-                    countQuatreSaisons += int.Parse(nameOrCount[0]);
+                case "2":
+                    pizzaCommand = CommandParserFactoryUpload
+                        .CreateCommandeParser("cmd").ParseCommand("");
                     break;
                 default:
-                    Console.WriteLine("La commande n'est pas valide");
-                    return;
+                    Console.WriteLine("Choix invalide");
+                    //continue permet de passer à la prochaine itération de la boucle while
+                    continue;
             }
+
+            if (pizzaCommand == null)
+            {
+                continue;
+            }
+
+            Console.Write("\nType de retour facture : json, txt, xml, cmd : ");
+            var choiceOut = Console.ReadLine();
+            if (choiceOut != null)
+                CommandParserFactoryDownload
+                    .CreateFactureParser(choiceOut).CreateFileFacture(pizzaCommand);
+            //DisplayRecette(pizzaCommand);
         }
-
-        var pizzaCommand = new PizzaCommandBuilder().withRegina(countRegina).withVegetarienne(countVegetarienne)
-            .withQuatreSaisons(countQuatreSaisons).Build();
-        Console.WriteLine("Regina " + pizzaCommand.Regina
-                                    + " Vegetarienne " + pizzaCommand.Vegetarienne
-                                    + " 4 Saisons " + pizzaCommand.QuatreSaisons);
-
-
-        CreateFacture(pizzaCommand);
-        DisplayRecette(pizzaCommand);
-    }
-
-    private static void DisplayFactureSection(int pizzaCount, Pizza pizza)
-    {
-        var pizzaName = pizza.Nom;
-        //get the lenght of the longest pizza.Ingredients name
-        var maxIngredientLength = pizza.Ingredients.Max(s => s.Name.Length);
-        var text = pizzaCount + " " + pizzaName + " : " + pizzaCount + " * " + pizza.Prix + "€";
-        Total += pizzaCount * pizza.Prix;
-        foreach (var ingredient in pizza.Ingredients)
-        {
-            text += "\n" + ingredient.Name.PadRight(maxIngredientLength) + " " +
-                    ingredient.Quantite * pizzaCount + " " + ingredient.Mesure;
-        }
-
-        Console.WriteLine("_________________________");
-        Console.WriteLine(text);
     }
 
     private static void CreateFacture(PizzaCommand pizzaCommand)
     {
         Console.WriteLine("\nFacture : ");
-        Total = 0.0;
+        _total = 0.0;
 
         if (pizzaCommand.Regina > 0)
         {
@@ -124,8 +70,26 @@ public static class MainClass
             DisplayFactureSection(pizzaCommand.Vegetarienne, Pizza.Create("vegetarienne"));
         }
 
-        Console.WriteLine("Prix total : " + Total + "€");
+        Console.WriteLine("Prix total : " + _total + "€");
     }
+
+    private static void DisplayFactureSection(int pizzaCount, Pizza pizza)
+    {
+        var pizzaName = pizza.Nom;
+        //get the lenght of the longest pizza.Ingredients name
+        var maxIngredientLength = pizza.Ingredients.Max(s => s.Name.Length);
+        var text = pizzaCount + " " + pizzaName + " : " + pizzaCount + " * " + pizza.Prix + "€";
+        _total += pizzaCount * pizza.Prix;
+        foreach (var ingredient in pizza.Ingredients)
+        {
+            text += "\n" + ingredient.Name.PadRight(maxIngredientLength) + " " +
+                    ingredient.Quantite * pizzaCount + " " + ingredient.Mesure;
+        }
+
+        Console.WriteLine("_________________________");
+        Console.WriteLine(text);
+    }
+
 
     private static void DisplayRecette(PizzaCommand pizzaCommand)
     {
