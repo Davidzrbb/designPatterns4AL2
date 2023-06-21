@@ -32,7 +32,6 @@ public static class MainClass
                     break;
                 default:
                     Console.WriteLine("Choix invalide");
-                    //continue permet de passer à la prochaine itération de la boucle while
                     continue;
             }
 
@@ -41,55 +40,14 @@ public static class MainClass
                 continue;
             }
 
-            Console.Write("\nType de retour facture : json, txt, xml, cmd : ");
+            Console.Write("\nType de retour facture : json, txt, xml : ");
             var choiceOut = Console.ReadLine();
             if (choiceOut != null)
                 CommandParserFactoryDownload
                     .CreateFactureParser(choiceOut).CreateFileFacture(pizzaCommand);
-            //DisplayRecette(pizzaCommand);
+            DisplayRecette(pizzaCommand);
         }
     }
-
-    private static void CreateFacture(PizzaCommand pizzaCommand)
-    {
-        Console.WriteLine("\nFacture : ");
-        _total = 0.0;
-
-        if (pizzaCommand.Regina > 0)
-        {
-            DisplayFactureSection(pizzaCommand.Regina, Pizza.Create("regina"));
-        }
-
-        if (pizzaCommand.QuatreSaisons > 0)
-        {
-            DisplayFactureSection(pizzaCommand.QuatreSaisons, Pizza.Create("4saisons"));
-        }
-
-        if (pizzaCommand.Vegetarienne > 0)
-        {
-            DisplayFactureSection(pizzaCommand.Vegetarienne, Pizza.Create("vegetarienne"));
-        }
-
-        Console.WriteLine("Prix total : " + _total + "€");
-    }
-
-    private static void DisplayFactureSection(int pizzaCount, Pizza pizza)
-    {
-        var pizzaName = pizza.Nom;
-        //get the lenght of the longest pizza.Ingredients name
-        var maxIngredientLength = pizza.Ingredients.Max(s => s.Name.Length);
-        var text = pizzaCount + " " + pizzaName + " : " + pizzaCount + " * " + pizza.Prix + "€";
-        _total += pizzaCount * pizza.Prix;
-        foreach (var ingredient in pizza.Ingredients)
-        {
-            text += "\n" + ingredient.Name.PadRight(maxIngredientLength) + " " +
-                    ingredient.Quantite * pizzaCount + " " + ingredient.Mesure;
-        }
-
-        Console.WriteLine("_________________________");
-        Console.WriteLine(text);
-    }
-
 
     private static void DisplayRecette(PizzaCommand pizzaCommand)
     {

@@ -5,6 +5,11 @@ public class FactureIngredients
     public string PizzaName { get; set; }
     public List<Ingredient> Ingredients { get; set; } = new();
 
+    public FactureIngredients()
+    {
+        // Parameterless constructor
+    }
+
     public FactureIngredients(string pizzaName, List<Ingredient> ingredients)
     {
         PizzaName = pizzaName;

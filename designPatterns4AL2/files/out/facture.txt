@@ -1,0 +1,18 @@
+Facture : 
+3 Regina : 3 * 8€
+tomate            450 g
+mozzarella        375 g
+fromage râpe      300 g
+jambon            6 tranches
+champignons frais 12 
+huile d'olive     6 cuillères à soupe
+_________________________
+1 Vegetarienne : 1 * 7,5€
+tomate          150 g
+mozzarella      100 g
+courgette       0,5 
+poivron jaune   1 
+tomates cerises 6 
+quelques olives 0 
+_________________________
+Total : 31,5€
