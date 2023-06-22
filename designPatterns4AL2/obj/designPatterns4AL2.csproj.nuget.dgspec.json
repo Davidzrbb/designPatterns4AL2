@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\workspace\\designPatterns4AL2\\designPatterns4AL2\\designPatterns4AL2.csproj": {}
+    "/Users/davidzerbib/RiderProjects/designPatterns4AL2/designPatterns4AL2/designPatterns4AL2.csproj": {}
   },
   "projects": {
-    "C:\\workspace\\designPatterns4AL2\\designPatterns4AL2\\designPatterns4AL2.csproj": {
+    "/Users/davidzerbib/RiderProjects/designPatterns4AL2/designPatterns4AL2/designPatterns4AL2.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\workspace\\designPatterns4AL2\\designPatterns4AL2\\designPatterns4AL2.csproj",
+        "projectUniqueName": "/Users/davidzerbib/RiderProjects/designPatterns4AL2/designPatterns4AL2/designPatterns4AL2.csproj",
         "projectName": "designPatterns4AL2",
-        "projectPath": "C:\\workspace\\designPatterns4AL2\\designPatterns4AL2\\designPatterns4AL2.csproj",
-        "packagesPath": "C:\\Users\\33766\\.nuget\\packages\\",
-        "outputPath": "C:\\workspace\\designPatterns4AL2\\designPatterns4AL2\\obj\\",
+        "projectPath": "/Users/davidzerbib/RiderProjects/designPatterns4AL2/designPatterns4AL2/designPatterns4AL2.csproj",
+        "packagesPath": "/Users/davidzerbib/.nuget/packages/",
+        "outputPath": "/Users/davidzerbib/RiderProjects/designPatterns4AL2/designPatterns4AL2/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\33766\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "/Users/davidzerbib/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net7.0"
@@ -37,6 +37,12 @@
       "frameworks": {
         "net7.0": {
           "targetAlias": "net7.0",
+          "dependencies": {
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.3, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -53,7 +59,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Users\\33766\\.dotnet\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/Users/davidzerbib/.dotnet/sdk/7.0.202/RuntimeIdentifierGraph.json"
         }
       }
     }

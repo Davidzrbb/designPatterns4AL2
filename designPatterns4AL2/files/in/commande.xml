@@ -1,0 +1,15 @@
+<command>
+    <pizza>
+        <name>regina</name>
+        <quantity>2</quantity>
+    </pizza>
+    <pizza>
+        <name>vegetarienne</name>
+        <quantity>1</quantity>
+    </pizza>
+    <pizza>
+        <name>regina</name>
+        <quantity>1</quantity>
+    </pizza>
+</command>
+    
