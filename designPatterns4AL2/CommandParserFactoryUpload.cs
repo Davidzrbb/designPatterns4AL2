@@ -28,7 +28,7 @@ public class CommandParserFactoryUpload
     {
         public PizzaCommand? ParseCommand(string path)
         {
-            var contenuFichier = File.ReadAllText(path);
+            var contenuFichier = File.ReadAllText("../../../files/in/" + path);
             var pizzaCommandParseModel = JsonConvert.DeserializeObject<List<PizzaCommandParseModel>>(contenuFichier);
             return countPizza(pizzaCommandParseModel!);
         }
@@ -38,7 +38,7 @@ public class CommandParserFactoryUpload
     {
         public PizzaCommand? ParseCommand(string path)
         {
-            var contenuFichier = File.ReadAllText(path);
+            var contenuFichier = File.ReadAllText("../../../files/in/" + path);
             var serializer = new XmlSerializer(typeof(Root));
             var reader = new StringReader(contenuFichier);
             var pizzaCommandParseModel = (Root)serializer.Deserialize(reader)!;
@@ -50,14 +50,14 @@ public class CommandParserFactoryUpload
     {
         public PizzaCommand? ParseCommand(string path)
         {
-            var contenuFichier = File.ReadAllText(path);
+            var contenuFichier = File.ReadAllText("../../../files/in/" + path);
             var pizzaCommandParseModelArray = new List<PizzaCommandParseModel>();
             foreach (var line in contenuFichier.Split("\n"))
             {
                 var pizzaCommandParseModel = new PizzaCommandParseModel();
                 var split = line.Split(" ");
-                pizzaCommandParseModel.Quantity = int.Parse(split[0]);
-                pizzaCommandParseModel.Name = split[1];
+                pizzaCommandParseModel.Quantity = int.Parse(split[0].Trim());
+                pizzaCommandParseModel.Name = split[1].Trim();
                 pizzaCommandParseModelArray.Add(pizzaCommandParseModel);
             }
 
@@ -79,7 +79,7 @@ public class CommandParserFactoryUpload
         private static void DisplayMenu()
         {
             Console.WriteLine(Pizza.Create("regina").Nom + ", " + Pizza.Create("vegetarienne").Nom + ", " +
-                              Pizza.Create("4saisons").Nom);
+                              Pizza.Create("4saisons").Nom + " ou autre nom pour une pizza personnalisée");
         }
 
         private static List<PizzaCommandParseModel>? TakeCommand()
@@ -123,6 +123,7 @@ public class CommandParserFactoryUpload
         var countRegina = 0;
         var countVegetarienne = 0;
         var countQuatreSaisons = 0;
+        var customs = new List<PizzaCommandParseModel>();
         foreach (var pizza in pizzaCommandParseModel!)
         {
             switch (pizza.Name)
@@ -137,8 +138,18 @@ public class CommandParserFactoryUpload
                     countQuatreSaisons += pizza.Quantity;
                     break;
                 default:
-                    //TODO this create new pizza ?
-                    Console.WriteLine("Pizza non reconnue : " + pizza.Name);
+                    var found = false;
+                    foreach (var custom in customs.Where(custom => custom.Name == pizza.Name))
+                    {
+                        custom.Quantity += pizza.Quantity;
+                        found = true;
+                    }
+
+                    if (!found)
+                    {
+                        customs.Add(pizza);
+                    }
+                    
                     break;
             }
         }
@@ -146,7 +157,12 @@ public class CommandParserFactoryUpload
         Console.WriteLine("Regina : " + countRegina
                                       + "\nVegetarienne : " + countVegetarienne
                                       + "\n4 Saisons : " + countQuatreSaisons);
+        foreach (var pizza in customs)
+        {
+            Console.WriteLine(pizza.Name + " : " + pizza.Quantity);
+        }
+        
         return new PizzaCommandBuilder().WithRegina(countRegina).WithVegetarienne(countVegetarienne)
-            .WithQuatreSaisons(countQuatreSaisons).Build();
+            .WithQuatreSaisons(countQuatreSaisons).WithCustom(customs).Build();
     }
 }

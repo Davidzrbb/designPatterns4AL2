@@ -9,16 +9,13 @@
   <component name="ChangeListManager">
     <list default="true" id="35212821-be21-4345-9dd8-d180ceb8b913" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.designPatterns4AL2/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.designPatterns4AL2/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/designPatterns4AL2/CommandParserFactoryDownload.cs" beforeDir="false" afterPath="$PROJECT_DIR$/designPatterns4AL2/CommandParserFactoryDownload.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/designPatterns4AL2/CommandParserFactoryUpload.cs" beforeDir="false" afterPath="$PROJECT_DIR$/designPatterns4AL2/CommandParserFactoryUpload.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/designPatterns4AL2/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/designPatterns4AL2/Program.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/designPatterns4AL2/bin/Debug/net7.0/designPatterns4AL2.dll" beforeDir="false" afterPath="$PROJECT_DIR$/designPatterns4AL2/bin/Debug/net7.0/designPatterns4AL2.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/designPatterns4AL2/bin/Debug/net7.0/designPatterns4AL2.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/designPatterns4AL2/bin/Debug/net7.0/designPatterns4AL2.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/designPatterns4AL2/designPatterns4AL2.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/designPatterns4AL2/designPatterns4AL2.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/designPatterns4AL2/files/out/facture.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/designPatterns4AL2/models/facture/FactureIngredients.cs" beforeDir="false" afterPath="$PROJECT_DIR$/designPatterns4AL2/models/facture/FactureIngredients.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/designPatterns4AL2/models/pizza/Ingredient.cs" beforeDir="false" afterPath="$PROJECT_DIR$/designPatterns4AL2/models/pizza/Ingredient.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/designPatterns4AL2/obj/Debug/net7.0/designPatterns4AL2.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/designPatterns4AL2/obj/Debug/net7.0/designPatterns4AL2.csproj.CoreCompileInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/designPatterns4AL2/files/out/facture.json" beforeDir="false" afterPath="$PROJECT_DIR$/designPatterns4AL2/files/out/facture.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/designPatterns4AL2/files/out/facture.txt" beforeDir="false" afterPath="$PROJECT_DIR$/designPatterns4AL2/files/out/facture.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/designPatterns4AL2/models/pizza/PizzaCommand.cs" beforeDir="false" afterPath="$PROJECT_DIR$/designPatterns4AL2/models/pizza/PizzaCommand.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/designPatterns4AL2/obj/Debug/net7.0/designPatterns4AL2.dll" beforeDir="false" afterPath="$PROJECT_DIR$/designPatterns4AL2/obj/Debug/net7.0/designPatterns4AL2.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/designPatterns4AL2/obj/Debug/net7.0/designPatterns4AL2.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/designPatterns4AL2/obj/Debug/net7.0/designPatterns4AL2.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/designPatterns4AL2/obj/Debug/net7.0/ref/designPatterns4AL2.dll" beforeDir="false" afterPath="$PROJECT_DIR$/designPatterns4AL2/obj/Debug/net7.0/ref/designPatterns4AL2.dll" afterDir="false" />
@@ -49,32 +46,33 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/afe9538536dd578581b31d31b4d928bb7bf13898bdebcaf59d09be1c16d40/XmlNode.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="ProjectId" id="2OxaT9vxjus7V1scIOGLcGiYp5z" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;feature/file-in-out&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.keymap&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "feature/file-in-out",
+    "ignore.virus.scanning.warn.message": "true",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.keymap",
+    "vue.rearranger.settings.migration": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;rider.external.source.directories&quot;: [
-      &quot;/Users/davidzerbib/Library/Application Support/JetBrains/Rider2023.1/resharper-host/DecompilerCache&quot;,
-      &quot;/Users/davidzerbib/Library/Application Support/JetBrains/Rider2023.1/resharper-host/SourcesCache&quot;,
-      &quot;/Users/davidzerbib/.local/share/Symbols/src&quot;
+  "keyToStringList": {
+    "rider.external.source.directories": [
+      "C:\\Users\\ferre\\AppData\\Roaming\\JetBrains\\Rider2023.1\\resharper-host\\DecompilerCache",
+      "C:\\Users\\ferre\\AppData\\Roaming\\JetBrains\\Rider2023.1\\resharper-host\\SourcesCache",
+      "C:\\Users\\ferre\\AppData\\Local\\Symbols\\src"
     ]
   }
-}</component>
+}]]></component>
   <component name="RunManager">
     <configuration name="designPatterns4AL2" type="DotNetProject" factoryName=".NET Project">
       <option name="EXE_PATH" value="$PROJECT_DIR$/designPatterns4AL2/bin/Debug/net7.0/designPatterns4AL2" />
@@ -114,6 +112,7 @@
       <workItem from="1687292857165" duration="5316000" />
       <workItem from="1687298193779" duration="1473000" />
       <workItem from="1687334435883" duration="11046000" />
+      <workItem from="1687499761179" duration="13785000" />
     </task>
     <servers />
   </component>

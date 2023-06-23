@@ -69,7 +69,67 @@
           "Mesure": ""
         }
       ]
+    },
+    {
+      "PizzaName": "truc",
+      "Ingredients": [
+        {
+          "Name": "tomate",
+          "Quantite": 200,
+          "Mesure": "g"
+        },
+        {
+          "Name": "mozzarella",
+          "Quantite": 50,
+          "Mesure": "g"
+        }
+      ]
+    },
+    {
+      "PizzaName": "bidule",
+      "Ingredients": [
+        {
+          "Name": "olives",
+          "Quantite": 4,
+          "Mesure": ""
+        },
+        {
+          "Name": "fromage rapé",
+          "Quantite": 200,
+          "Mesure": "g"
+        },
+        {
+          "Name": "tomate",
+          "Quantite": 100,
+          "Mesure": "g"
+        }
+      ]
+    },
+    {
+      "PizzaName": "chose",
+      "Ingredients": [
+        {
+          "Name": "olives",
+          "Quantite": 12,
+          "Mesure": ""
+        },
+        {
+          "Name": "tomate cerise",
+          "Quantite": 12,
+          "Mesure": ""
+        },
+        {
+          "Name": "poivron jaune",
+          "Quantite": 3,
+          "Mesure": ""
+        },
+        {
+          "Name": "huile d'olive",
+          "Quantite": 6,
+          "Mesure": "cuillères à soupe"
+        }
+      ]
     }
   ],
-  "Prix": 31.5
+  "Prix": 41.5
 }

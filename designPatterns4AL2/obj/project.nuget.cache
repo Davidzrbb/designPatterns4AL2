@@ -1,10 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "781djdRnLdTKdK27pH9xLQViHrcG77e+SRNhmyEoSjRmlZLj4/Ppj7C1Iy4Sigxy89xHxiJsu5KdHzOb0aiFhw==",
+  "dgSpecHash": "41Aw5gkBg9fNOrW1DKdyQSXo4l/eZ7LBsol1Lovzw8QBFM9Fv6OHb9H5vpjw9X6F7ZGt32TS5PkiFovMSKBYPg==",
   "success": true,
-  "projectFilePath": "/Users/davidzerbib/RiderProjects/designPatterns4AL2/designPatterns4AL2/designPatterns4AL2.csproj",
+  "projectFilePath": "D:\\DP4AL2\\designPatterns4AL2\\designPatterns4AL2.csproj",
   "expectedPackageFiles": [
-    "/Users/davidzerbib/.nuget/packages/newtonsoft.json/13.0.3/newtonsoft.json.13.0.3.nupkg.sha512"
+    "C:\\Users\\ferre\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512"
   ],
   "logs": []
 }

@@ -11,5 +11,17 @@
         <name>regina</name>
         <quantity>1</quantity>
     </pizza>
+    <pizza>
+        <name>truc</name>
+        <quantity>2</quantity>
+    </pizza>
+    <pizza>
+        <name>bidule</name>
+        <quantity>1</quantity>
+    </pizza>
+    <pizza>
+        <name>chose</name>
+        <quantity>3</quantity>
+    </pizza>
 </command>
     
