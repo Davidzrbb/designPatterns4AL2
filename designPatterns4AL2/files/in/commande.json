@@ -10,5 +10,17 @@
   {
     "name": "regina",
     "quantity": 1
+  },
+  {
+    "name": "truc",
+    "quantity": 2
+  },
+  {
+    "name": "bidule",
+    "quantity": 1
+  },
+  {
+    "name": "chose",
+    "quantity": 3
   }
 ]

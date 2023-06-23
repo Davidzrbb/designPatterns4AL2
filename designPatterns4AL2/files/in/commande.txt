@@ -1,3 +1,6 @@
 2 regina
 1 vegetarienne
 1 regina
+2 truc
+1 bidule
+3 chose

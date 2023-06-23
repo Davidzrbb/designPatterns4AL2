@@ -13,7 +13,7 @@ public interface ICommandParserDownload
 
 public static class CommandParserFactoryDownload
 {
-    private const string SavePath = "/Users/davidzerbib/RiderProjects/designPatterns4AL2/designPatterns4AL2/files/out/";
+    private const string SavePath = "D:/DP4AL2/designPatterns4AL2/files/out/";
 
     public static ICommandParserDownload CreateFactureParser(string typeFichier)
     {
@@ -51,6 +51,15 @@ public static class CommandParserFactoryDownload
             facture.Prix += pizza.Prix * pizzaCommand.Vegetarienne;
         }
 
+        if (pizzaCommand.Customs.Count() > 0)
+        {
+            foreach (var pizza in pizzaCommand.Customs)
+            {
+                factureIngredients.Add(new FactureIngredients(pizza.Key.Nom, pizza.Key.Ingredients));
+                facture.Prix += pizza.Key.Prix;
+            }
+        }
+
         facture.Factures = factureIngredients;
         return facture;
     }
@@ -73,6 +82,15 @@ public static class CommandParserFactoryDownload
                 { "Vegetarienne", pizzaCommand.Vegetarienne },
                 { "QuatreSaisons", pizzaCommand.QuatreSaisons }
             };
+
+            if (pizzaCommand.Customs.Count > 0)
+            {
+                foreach (var pizza in pizzaCommand.Customs)
+                {
+                    pizzaQuantities.Add(pizza.Key.Nom, pizza.Value);
+                }
+            }
+            
             foreach (var factureIngredient in facturesArray)
             {
                 var pizzaName = factureIngredient["PizzaName"]!.ToString();
@@ -96,6 +114,14 @@ public static class CommandParserFactoryDownload
                 { "Vegetarienne", pizzaCommand.Vegetarienne },
                 { "QuatreSaisons", pizzaCommand.QuatreSaisons }
             };
+
+            if (pizzaCommand.Customs.Count > 0)
+            {
+                foreach(var pizza in pizzaCommand.Customs)
+                {
+                    pizzaQuantities.Add(pizza.Key.Nom, pizza.Value);
+                }
+            }
 
             var xsSubmit = new XmlSerializer(typeof(Facture));
             var xml = "";
@@ -156,6 +182,14 @@ public static class CommandParserFactoryDownload
             if (pizzaCommand.Vegetarienne > 0)
             {
                 text += DisplayFactureSection(pizzaCommand.Vegetarienne, Pizza.Create("vegetarienne"));
+            }
+
+            if (pizzaCommand.Customs.Count > 0)
+            {
+                foreach (var custom in pizzaCommand.Customs)
+                {
+                    text += DisplayFactureSection(custom.Value, custom.Key);
+                }
             }
 
             text += "Total : " + _total + "€";

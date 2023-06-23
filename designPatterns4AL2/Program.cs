@@ -6,7 +6,7 @@ public static class MainClass
 
     public static void Main(string[] args)
     {
-        var pizzaCommand = new PizzaCommand(0, 0, 0);
+        var pizzaCommand = null as PizzaCommand;
         Console.OutputEncoding = System.Text.Encoding.UTF8;
         while (true)
         {
@@ -23,8 +23,20 @@ public static class MainClass
                     Console.Write("\nChemin du fichier : ");
                     var path = Console.ReadLine();
                     if (path != null)
-                        pizzaCommand = CommandParserFactoryUpload
-                            .CreateCommandeParser(Path.GetExtension(path)).ParseCommand(path);
+                    {
+                        try
+                        {
+                            pizzaCommand = CommandParserFactoryUpload
+                                .CreateCommandeParser(Path.GetExtension(path)).ParseCommand(path);
+                        }
+                        catch (Exception e)
+                        {
+                            Console.WriteLine(e.Message);
+                            continue;
+                        }
+                        
+                    }
+
                     break;
                 case "2":
                     pizzaCommand = CommandParserFactoryUpload
@@ -66,6 +78,14 @@ public static class MainClass
         {
             DisplayRcetteSection(Pizza.Create("vegetarienne"));
         }
+
+        if (pizzaCommand.Customs.Count > 0)
+        {
+            foreach (var custom in pizzaCommand.Customs)
+            {
+                DisplayRcetteSection(custom.Key);
+            }
+        }
     }
 
     private static void DisplayRcetteSection(Pizza pizza)
@@ -83,4 +103,6 @@ public static class MainClass
 
         Console.WriteLine("Cuire la pizza");
     }
+    
+    
 }
